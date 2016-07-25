@@ -56,3 +56,20 @@ print named_result_ex
 named_result = query.namedresult()
 for coder in named_result:
     print "Coder: %s, Email: %s" % (coder.name, coder.email_address)
+
+
+
+# insert data - using the API
+# db.insert(TABLE_NAME, COLUMN1=VALUE1, COLUMN2=VALUE2)
+db.insert('coder', name='Anthony', email_address='anthony@me.com')
+
+
+
+# to update data - using the API
+# db.update(TABLE_NAME, dictionary)
+## dictionary must contain:
+# 1. the primary key of the object to be updated
+# 2. the columns to be updated in that row
+db.update('coder', {'id': 1, 'name': 'Matt'})
+db.update('coder', {'id': 8, 'name': 'Regan', 'email_address': 'regan@me.com'})
+print query
