@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<form action="/submit_form" method="POST">
+  <p>
+    <label for="project_name">Project Name:</label>
+    <input type="text" name="project_name">
+  </p>
+  <p>
+    <label for="project_description">Project Description:</label>
+    <input type="text" name="project_description">
+  </p>
+  <p>
+    <button type="submit">Add project!</button>
+  </p>
+</form>
+{% endblock %}
